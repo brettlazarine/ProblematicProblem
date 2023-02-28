@@ -14,7 +14,7 @@ namespace ProblematicProblem
         {
             Random rng = new Random();
             Console.Write("Hello, welcome to the random activity generator! \nWould you like to generate a random activity? yes/no: ");
-            cont = Console.ReadLine();
+            cont = Console.ReadLine().ToLower();
             if (cont == "yes") { contin = true; } else { contin = false; }
             if (contin)
             {
@@ -26,7 +26,7 @@ namespace ProblematicProblem
                 int userAge = int.Parse(Console.ReadLine());
                 Console.WriteLine();
                 Console.Write("Would you like to see the current list of activities? Sure/No thanks: ");
-                string seeList = Console.ReadLine();
+                string seeList = Console.ReadLine().ToLower();
                 bool seeLst;
                 if (seeList == "sure") { seeLst = true; } else { seeLst = false; }
                 if (seeLst)
@@ -38,7 +38,7 @@ namespace ProblematicProblem
                     }
                     Console.WriteLine();
                     Console.Write("Would you like to add any activities before we generate one? yes/no: ");
-                    string addToList = Console.ReadLine();
+                    string addToList = Console.ReadLine().ToLower();
                     bool addLst;
                     if (addToList == "yes") { addLst = true; } else { addLst = false; }
                     Console.WriteLine();
@@ -54,7 +54,7 @@ namespace ProblematicProblem
                         }
                         Console.WriteLine();
                         Console.WriteLine("Would you like to add more? yes/no: ");
-                        addToList = Console.ReadLine();
+                        addToList = Console.ReadLine().ToLower();
                         if (addToList == "yes") { addLst = true; } else { addLst = false; }
                     }
                 }
@@ -87,7 +87,7 @@ namespace ProblematicProblem
                     }
                     Console.Write($"Ah got it! {userName}, your random activity is: {randomActivity}! Is this ok or do you want to grab another activity? Keep/Redo: ");
                     Console.WriteLine();
-                    cont = Console.ReadLine();
+                    cont = Console.ReadLine().ToLower();
                     if (cont == "redo") { contin = true; } else { contin = false; }
                 }
             }
